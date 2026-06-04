@@ -100,7 +100,7 @@ def _parse_era5_workers():
     workers: list[dict] = []
     for line in reversed(lines):
         line = line.strip()
-        m = re.match(r"\[(W..)\]  \[(\d{4}-\d{2})\]  (.+)", line)
+        m = re.match(r"\[(W..)\] \[(\d{4}-\d{2})\] (.+)", line)
         if not m: continue
         wid, month, rest = m.group(1), m.group(2), m.group(3)
         key = (wid, month)
